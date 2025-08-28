@@ -24,7 +24,7 @@ services:
         - VITE_OPENWEATHER_API_KEY=${VITE_OPENWEATHER_API_KEY}
         - VITE_REACT_APP_API_URL=${VITE_REACT_APP_API_URL}
     ports:
-      - "5050:5050"
+      - "5050:3000"
     depends_on:
       - homeglow-backend
     networks:
