@@ -7,8 +7,8 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - /apps/homeglow/data:/app/data
-      - /apps/homeglow/uploads:/app/uploads
+      - /mnt/user/appdata/homeglow/data:/app/data
+      - /mnt/user/appdata/homeglow/uploads:/app/uploads
     environment:
       - NODE_ENV=production
       - PORT=5000
@@ -24,7 +24,7 @@ services:
         - VITE_OPENWEATHER_API_KEY=${VITE_OPENWEATHER_API_KEY}
         - VITE_REACT_APP_API_URL=${VITE_REACT_APP_API_URL}
     ports:
-      - "3000:3000"
+      - "5050:5050"
     depends_on:
       - homeglow-backend
     networks:
